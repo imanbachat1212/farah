@@ -166,6 +166,68 @@
                     <div class="col-md-12 text-center">
                       <div class="about-vision-content">
                         <div class="col">
+                          <div class="about-vision-content">
+                            <header class="title">
+                              <h2 id="key">Key Achievements</h2>
+                            </header>
+                            <div class="achievements-grid">
+                              <div class="achievement-item">
+                                <img
+                                  src="assets/images/brands/diamond.png"
+                                  alt="image"
+                                  class="icon"
+                                />
+                                <h4 class="head-key">Impacting Donors</h4>
+                                <p>
+                                  Contributed to award-winning proposals and
+                                  designed evaluations influencing donors'
+                                  decision-making processes.
+                                </p>
+                              </div>
+                              <div class="achievement-item">
+                                <img
+                                  src="assets/images/brands/diamond.png"
+                                  alt="image"
+                                  class="icon"
+                                />
+                                <h4 class="head-key">
+                                  Capacity Building Success
+                                </h4>
+                                <p>
+                                  Trained over 1,500 staff and partners on
+                                  gender, diversity, disability inclusion, and
+                                  SRHR across Lebanon, the MENA region, and East
+                                  and West Africa.
+                                </p>
+                              </div>
+                              <div class="achievement-item boxed">
+                                <img
+                                  src="assets/images/brands/diamond.png"
+                                  alt="image"
+                                  class="icon"
+                                />
+                                <h4 class="head-key">Reporting Enhancement</h4>
+                                <p style="margin-right: 20%">
+                                  Increased reporting efficiency by 60% through
+                                  the integration of gender and feminist
+                                  standards.
+                                </p>
+                              </div>
+                              <div class="achievement-item">
+                                <img
+                                  src="assets/images/brands/diamond.png"
+                                  alt="image"
+                                  class="icon"
+                                />
+                                <h4 class="head-key">Representation</h4>
+                                <p>
+                                  Served as Save the Children Spokesperson for
+                                  Lebanon, IRC Gender Champion, and IRC Way Day
+                                  Ambassador.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                           <header class="title">
                             <h2>Timeline</h2>
                           </header>
@@ -290,6 +352,52 @@
             </div>
           </div>
         </div>
+        <style>
+          .achievements-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+          }
+          .achievement-item {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+          .achievement-item.boxed {
+            /* justify-content: flex-start; */
+          }
+          .icon {
+            font-size: 24px;
+            width: 7%;
+          }
+          h4 {
+            margin: 0;
+            color: #11a372;
+            font-size: large;
+          }
+          @media screen and (max-width: 768px) {
+            .achievements-grid {
+              grid-template-columns: 1fr;
+            }
+            .achievement-item {
+              flex-direction: column;
+              text-align: center;
+              align-items: center;
+            }
+            .icon {
+              display: inline-block;
+            }
+            #key {
+              margin-top: 50px;
+              font-size: 20px;
+            }
+          }
+        </style>
         <!-- End breadcumb area -->
         <!-- footer area -->
         <footer class="footer-distributed">
