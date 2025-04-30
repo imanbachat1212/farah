@@ -22,6 +22,10 @@ main.row {
 #about-logo {
   max-width: 40vh;
 }
+#key {
+  color: #11a372;
+  margin-top: 30px;
+}
 .col .contents .box {
   position: relative;
   padding: 20px;
@@ -71,5 +75,47 @@ main.row {
   }
   .row .col:nth-child(2) {
     margin-top: 30px;
+  }
+}
+.achievements-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+.achievement-item {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  width: 7%;
+}
+.head-key {
+  margin: 0;
+  color: #11a372;
+  font-size: large;
+}
+@media screen and (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .icon {
+    display: inline-block;
+  }
+  #key {
+    margin-top: 50px;
+    font-size: 20px;
   }
 }
