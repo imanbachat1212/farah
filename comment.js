@@ -63,6 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((comments) => {
         const commentsList = document.getElementById("commentsList");
         commentsList.innerHTML = ""; // Clear existing comments
+        // ✅ Set dynamic comment count
+        const commentCountElement = document.getElementById("commentCount");
+        if (commentCountElement) {
+          commentCountElement.textContent = comments.length;
+        }
         comments.forEach((comment) => {
           const commentBox = document.createElement("div");
           commentBox.className = "comment-box";
