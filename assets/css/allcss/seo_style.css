@@ -59,12 +59,16 @@ body {
   color: #229383;
   -webkit-animation: blink 1s infinite;
 }
+#farahphoto {
+  width: 50vh;
+  margin-right: 30%;
+  margin-top: -15%;
+}
 @media (max-width: 768px) {
   #typewriter-text {
     position: absolute;
-    top: 55%; /* Adjust vertically */
-    left: 5%; /* Adjust horizontally */
-    font-size: 10px; /* Smaller text on mobile */
+    top: 40%; /* Adjust vertically */
+    font-size: large; /* Smaller text on mobile */
     overflow: visible;
   }
 
