@@ -175,26 +175,9 @@
           <div class="col-lg-6 col-md-6">
             <div class="witr_animate_area witr_animate_height">
               <div class="witr_animate_content text-">
-                <h1 style="font-size: large">
-                  Farah Salhab Gender Equality Consultant & Inclusion Expert
-                </h1>
-                <h2 class="cd-headline clip is-full-width">
-                  <br />
-                  <!-- <span
-                    class="cd-words-wrapper witr_ani_text"
-                    style="color: #229383"
-                  >
-                    <b class="is-visible">gender mainstreaming</b>
-                    <b class="is-hidden"> gender transformation</b>
-                    <b class="is-hidden"> diversity</b>
-                    <b class="is-hidden"> accessibility</b>
-                    <b class="is-hidden"> intersectional feminism</b>
-                  </span> -->
-                </h2>
+                <h1 id="typewriter-text"></h1>
                 <div class="witr_section_title">
-                  <div class="witr_section_title_inner text-left">
-                    <!-- <p style="font-size: 40px">Consulting Areas of Expertise.</p> -->
-                  </div>
+                  <div class="witr_section_title_inner text-left"></div>
                 </div>
                 <div class="ocwdc-domain-main" style="margin-top: -5%">
                   <form method="post" id="contact-form">
@@ -1231,6 +1214,22 @@
           }
         }
       };
+    </script>
+    <script>
+      const text =
+        "Farah Salhab – Gender Equality Consultant & Inclusion Expert";
+      const target = document.getElementById("typewriter-text");
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          target.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50); // Adjust speed here
+        }
+      }
+
+      window.onload = typeWriter;
     </script>
   </body>
 </html>
