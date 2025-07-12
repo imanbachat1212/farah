@@ -1259,6 +1259,9 @@
     font-size: small;
     white-space: 0;
   }
+  #rep {
+    padding-left: 0;
+  }
   .about-vision-content p {
     margin: 0 auto; /* this centers the paragraph if that's desired */
     text-align: justify;

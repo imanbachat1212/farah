@@ -14,6 +14,9 @@ main.row {
   color: #11a372;
   padding: 0px 0px 20px 30px;
 }
+#rep {
+  padding-left: 43px;
+}
 .col .contents {
   padding: 0px 30px;
   border-left: 2px solid #bababa;
