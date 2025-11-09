@@ -64,6 +64,9 @@ body {
   margin-right: 30%;
   margin-top: -15%;
 }
+#aub {
+  margin-top: -70vh;
+}
 @media (max-width: 768px) {
   #typewriter-text {
     position: absolute;
