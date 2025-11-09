@@ -71,7 +71,7 @@ body {
   #typewriter-text {
     position: absolute;
     top: 40%; /* Adjust vertically */
-    font-size: medium; /* Smaller text on mobile */
+    font-size: small; /* Smaller text on mobile */
     overflow: visible;
   }
   .mb-4 {
