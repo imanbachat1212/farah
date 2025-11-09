@@ -310,7 +310,7 @@
                     transform-origin: top center;
                   "
                 ></blockquote>
-                <p class="text-center mt-2">
+                <p id="aub" class="text-center" style="margin-top: -70vh">
                   <strong>AUB – GHI Reel:</strong> on how climate change affects
                   health in the MENA region, featuring Farah
                 </p>
@@ -1287,19 +1287,56 @@
       };
     </script>
     <script>
-      const text = "Farah Salhab – Gender Equity & Inclusion Strategist";
+      // --- config
+      const NAME = "Farah Salhab";
+      const TAGLINE = "– Gender Equity & Inclusion Strategist"; // keep the dash for desktop
+
       const target = document.getElementById("typewriter-text");
+      const mq = window.matchMedia("(max-width: 768px)"); // breakpoint for "responsive mode"
+      const SPEED = 50; // ms per char
+
       let i = 0;
+      let textToType = "";
+      let typing = false;
+
+      function buildText() {
+        // Small screens: break AFTER name
+        if (mq.matches) return NAME + "<br>" + TAGLINE.replace(/^–\s*/, ""); // remove the dash on small
+        // Desktop: one line with dash
+        return NAME + " " + TAGLINE;
+      }
 
       function typeWriter() {
-        if (i < text.length) {
-          target.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50); // Adjust speed here
+        if (!typing) return;
+        if (i < textToType.length) {
+          // handle <br> as a token
+          if (textToType.substring(i, i + 4) === "<br>") {
+            target.innerHTML += "<br>";
+            i += 4;
+          } else {
+            target.innerHTML += textToType.charAt(i);
+            i++;
+          }
+          setTimeout(typeWriter, SPEED);
         }
       }
 
-      window.onload = typeWriter;
+      function startTyping() {
+        typing = false; // stop any previous run
+        target.innerHTML = ""; // clear
+        textToType = buildText(); // choose version by screen size
+        i = 0;
+        typing = true;
+        typeWriter();
+      }
+
+      // Don't overwrite other onload handlers
+      window.addEventListener("load", startTyping);
+
+      // Rebuild text when crossing the breakpoint (e.g., rotate phone)
+      mq.addEventListener("change", () => {
+        startTyping();
+      });
     </script>
   </body>
 </html>

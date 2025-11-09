@@ -68,8 +68,14 @@ body {
   #typewriter-text {
     position: absolute;
     top: 40%; /* Adjust vertically */
-    font-size: large; /* Smaller text on mobile */
+    font-size: medium; /* Smaller text on mobile */
     overflow: visible;
+  }
+  .mb-4 {
+    padding: 30px;
+  }
+  #aub {
+    margin-top: -35vh;
   }
 
   .slider_area {
